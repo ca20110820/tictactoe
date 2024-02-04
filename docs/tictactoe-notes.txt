@@ -1,0 +1,60 @@
+
+3x3
+? | ? | ?
+? | ? | ?
+? | ? | ?
+
+4x4
+? | ? | ? | ?
+? | ? | ? | ?
+? | ? | ? | ?
+? | ? | ? | ?
+
+X | ? | ? | X
+? | X | X | ?
+? | X | X | ?
+X | ? | ? | X
+
+[(0,3), (1,2), (2,1), (3,0)]
+col = n - 1 - i
+3 = 4 - 1 - 0
+2 = 4 - 1 - 1
+1 = 4 - 1 - 2
+0 = 4 - 1 - 3
+
+Is this a "Win" for X? Ans: No
+? | ? | ? | ?
+? | ? | ? | X
+? | ? | X | ?
+? | X | ? | ?
+
+TODO: Define condition(s) for "Win" (Diagonal or Horizontal or Vertical).
+TODO: Create Data Collector and Processor to organize data for ML or RL.
+
+Notes/Remarks:
+- Players: "X" and "O" (1 and 0).
+- Each player take in turn, where "X" move first.
+
+Tasks
+- Implement the Square Grid Board.
+- Define Condition for "Win". 
+- Implement turn-based UI.
+- Implement mechanism to update the state of the game.
+- Implement functions to check if there is a "win".
+
+List of Classes:
+- Board		// Generalize to NxN
+- Game
+
+update_game_state :: (Player, Move, Prev Game State) -> New Game State
+update_game_state("X", (0, 2), Board[t-1]) -> Board[t]
+
+#############################################
+##### Welcome to my Tic-Tac-Toe Game!!! #####
+#############################################
+$ Select the NxN Board Size (N >= 3): 
+$ Please enter move for Player 'X' using [i, j] >> 1 2
+$ Please enter move for Player 'O' using [i, j] >> 1 2
+
+No one wins.
+Congratulations Player {player}!

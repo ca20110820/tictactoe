@@ -1,0 +1,24 @@
+If we want to create a AI to play tictactoe, we need to collect both the game instance metadata
+and data for each game iteration in that game instance.
+
+I successfully implemented a prototype, but it would be better to break the whole program into classes such as:
+
+class Move
+class Player
+
+class Game
++ current_player: str
++ winner: str | None
++ game_iteration: int
++ move(row: int, col: int) -> str | None	// This method would invoke a method for collecting data.
+collect_game_data()	// Collect game metadata and Data for each game iteration
+
+class Board
++ board_size: int
++ board_all_fileld: bool
+- grid: List[List[str]]
++ get_column() -> list
++ get_diagonal() -> list
++ print_grid() -> None
+
+// In Board Class, we standardized the first move label to be "X", and then "O".
