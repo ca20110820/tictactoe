@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from tictactoe.board import Board, BoardInvalidMove
 
 
